@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>音声を文字に変換</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <!-- テキスト表示（画面全体） -->
+    <div id="transcript" class="transcript-display">
+      ボタンを長く押して話してください
+    </div>
+
+    <!-- ステータス表示（小さく） -->
+    <div id="status" class="status-display"></div>
+
+    <!-- ボタンエリア（下部固定） -->
+    <div class="button-area">
+      <button id="recordBtn" class="btn btn-record">🎙️ 押して話す</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>
